@@ -7,7 +7,7 @@
 
 ## Preview
 
-### SQL Query untuk :
+### SQL Query for :
 
 1. Display all customers data
    <br>
@@ -120,7 +120,7 @@
    | Travis Pastrana | 083465738475  | Mat       | A1         | Red Ave      | USA     |
 
 3. Display data from customers, orders, order details and products table
-
+   <br>
    ```sql
    SELECT c.customerName, c.phone, o.orderNumber, o.orderDate, pd.productName, pd.productDescription
    FROM customers c
@@ -138,6 +138,7 @@
    | Travis Pastrana | 083465738475  | 4           | 2023-12-18 | GR86        | Toyota GR86                            |
 
 4. Display data from order, order details, payments and products table
+   <br>
 
    ```sql
    SELECT o.orderNumber, o.orderDate, py.paymentDate, py.checkNumber, py.amount,  od.productCode, p.productName, p.productDescription
