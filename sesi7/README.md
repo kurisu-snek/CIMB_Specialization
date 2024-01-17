@@ -13,7 +13,7 @@
     │   └── JwtConfig.cs
     ├── Controllers/
     │       ├── AuthManagementController.cs
-    │       └── TodoController.cs   
+    │       └── TodoController.cs
     ├── Data/
     │   └── ApiDbContext.cs
     ├── Migrations
@@ -44,7 +44,7 @@
 `/api/[controller]/[route]`
 
 ```http
-  POST /api/AuthManagement/Registration
+  POST /api/AuthManagement/Register
 ```
 
 ```http
@@ -62,11 +62,11 @@
 ```
 
 ```http
-  GET /api/Todo/{id}
+  POST /api/Todo/
 ```
 
 ```http
-  POST /api/Todo/
+  GET /api/Todo/{id}
 ```
 
 ```http
@@ -78,6 +78,7 @@
 ```
 
 ## Mock Test
+
 Unit Test can be found in UnitTest_Mock
 
 ```
@@ -86,22 +87,23 @@ Unit Test can be found in UnitTest_Mock
         ├── EmployeeTest.cs
     ├── UnitTest_Mock/
         ├── Controllers/
-        │   └── EmployeeController.cs   
+        │   └── EmployeeController.cs
         ├── Migrations
         ├── Models/
         │   ├── ApiDbContext.cs
         |   └── Employee.cs
         ├── Services/
-        |   ├── EmployeeService.cs 
+        |   ├── EmployeeService.cs
         |   └── IEmployeeService.cs
         ├── Program.cs
         └── Startup.cs
 ```
 
 ## Step to Run
+
 1. Open UnitTest_Mock.sln in Visual Studio 2019
 2. Run EmployeeTest.cs
 3. Click "View"
-3. Choose Test Explorer
-4. Run the test
-5. Get the result
+4. Choose Test Explorer
+5. Run the test
+6. Get the result
