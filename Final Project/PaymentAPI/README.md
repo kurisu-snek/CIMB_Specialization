@@ -1,8 +1,8 @@
-# Payment API Documentation
+# PaymentDetails API Documentation
 
 This document outlines the RESTful API endpoints for managing payment data.
 
-Base URL: `/api/payment`
+Base URL: `/api/PaymentDetails`
 
 | Endpoint | HTTP Method	Description | Description |
 |----------|-------------------------|-------------|
@@ -17,10 +17,10 @@ Example Request Body (POST, PUT):
 ```JSON
 {
   "id": int,
-  "cardOwnerName": "string",
-  "cardNumber": "DataType.CreditCard",
-  "expirationDate": "yyyy-MM-dd",
-  "securityCode": "string"
+  "cardOwnerName": string,
+  "cardNumber": DataType.CreditCard,
+  "expirationDate": yyyy-MM-dd,
+  "securityCode": string
 }
 ```
 
