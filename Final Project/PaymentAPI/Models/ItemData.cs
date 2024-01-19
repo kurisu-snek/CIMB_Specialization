@@ -10,14 +10,19 @@ namespace PaymentAPI.Models
     public class ItemData
     {
         [Key]
-        public int id { get; set; }
+        public int paymentDetailsid { get; set; }
         [Required]
         public string cardOwnerName { get; set; }
         [Required]
+        [DataType(DataType.CreditCard)]
+        [StringLength(16)]
         public string cardNumber { get; set; }
         [Required]
-        public string expirationDate { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
+        public DateTime expirationDate { get; set; }
         [Required]
+        [StringLength(3)]
         public string securityCode { get; set; }
     }
 }

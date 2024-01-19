@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PaymentAPI.Migrations
 {
-    public partial class InitialMigrations : Migration
+    public partial class Initialmigrations : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -10,16 +11,16 @@ namespace PaymentAPI.Migrations
                 name: "Payments",
                 columns: table => new
                 {
-                    id = table.Column<int>(type: "INTEGER", nullable: false)
+                    paymentDetailsid = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     cardOwnerName = table.Column<string>(type: "TEXT", nullable: false),
-                    cardNumber = table.Column<string>(type: "TEXT", nullable: false),
-                    expirationDate = table.Column<string>(type: "TEXT", nullable: false),
-                    securityCode = table.Column<string>(type: "TEXT", nullable: false)
+                    cardNumber = table.Column<string>(type: "TEXT", maxLength: 16, nullable: false),
+                    expirationDate = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    securityCode = table.Column<string>(type: "TEXT", maxLength: 3, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Payments", x => x.id);
+                    table.PrimaryKey("PK_Payments", x => x.paymentDetailsid);
                 });
         }
 

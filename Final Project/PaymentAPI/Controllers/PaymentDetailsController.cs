@@ -33,7 +33,7 @@ namespace PaymentAPI.Controllers
                 await _context.Payments.AddAsync(data);
                 await _context.SaveChangesAsync();
 
-                return CreatedAtAction("GetPayment", new { data.id }, data);
+                return CreatedAtAction("GetPayment", new { data.paymentDetailsid }, data);
             }
 
             return new JsonResult("Something went wrong") { StatusCode = 500 };
@@ -42,7 +42,7 @@ namespace PaymentAPI.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPayment(int id)
         {
-            var item = await _context.Payments.FirstOrDefaultAsync(x => x.id == id);
+            var item = await _context.Payments.FirstOrDefaultAsync(x => x.paymentDetailsid == id);
 
             if (item == null)
             {
@@ -54,12 +54,12 @@ namespace PaymentAPI.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdatePayment(int id, ItemData item)
         {
-            if (id != item.id)
+            if (id != item.paymentDetailsid)
             {
                 return BadRequest();
             }
 
-            var existItem = await _context.Payments.FirstOrDefaultAsync(x => x.id == id);
+            var existItem = await _context.Payments.FirstOrDefaultAsync(x => x.paymentDetailsid == id);
 
             if (existItem == null)
             {
@@ -80,7 +80,7 @@ namespace PaymentAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePayment(int id)
         {
-            var existItem = await _context.Payments.FirstOrDefaultAsync(x => x.id == id);
+            var existItem = await _context.Payments.FirstOrDefaultAsync(x => x.paymentDetailsid == id);
 
             if (existItem == null)
             {

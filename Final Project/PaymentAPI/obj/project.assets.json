@@ -1296,11 +1296,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MS92918X\\Desktop\\Training\\Specialization\\Final Project\\dotnet C#\\PaymentAPI - Copy\\PaymentAPI.csproj",
+      "projectUniqueName": "C:\\Users\\MS92918X\\Desktop\\Training\\Specialization\\Final Project\\PaymentAPI\\PaymentAPI.csproj",
       "projectName": "PaymentAPI",
-      "projectPath": "C:\\Users\\MS92918X\\Desktop\\Training\\Specialization\\Final Project\\dotnet C#\\PaymentAPI - Copy\\PaymentAPI.csproj",
+      "projectPath": "C:\\Users\\MS92918X\\Desktop\\Training\\Specialization\\Final Project\\PaymentAPI\\PaymentAPI.csproj",
       "packagesPath": "C:\\Users\\MS92918X\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MS92918X\\Desktop\\Training\\Specialization\\Final Project\\dotnet C#\\PaymentAPI - Copy\\obj\\",
+      "outputPath": "C:\\Users\\MS92918X\\Desktop\\Training\\Specialization\\Final Project\\PaymentAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MS92918X\\AppData\\Roaming\\NuGet\\NuGet.Config",
