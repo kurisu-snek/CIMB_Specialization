@@ -5,30 +5,30 @@
 1. Create a new test plan
 2. Add new **_Thread Group_**
 3. Add new **_HTTP Server Defaults_**
-   ![img_1.png](Screenshot/Capture_1_Set_default_server.png)
+   ![img_1.png](https://github.com/kurisu-snek/CIMB_Specialization/blob/main/Final%20Project/Pokemon-API-Groovy-Jmeter-FinalProject-Martin_Christian_Setiawan/Screenshot/Capture_1_Set_default_server.PNG)
 4. Set user variables
-   ![img_2.png](Screenshot/Capture_2_Set_User_Variables.png)
+   ![img_2.png](https://github.com/kurisu-snek/CIMB_Specialization/blob/main/Final%20Project/Pokemon-API-Groovy-Jmeter-FinalProject-Martin_Christian_Setiawan/Screenshot/Capture_2_Set_User_Variables.PNG)
 
 **Perform a looped HTTP GET request to the Pokémon API to search for Pikachu's species information. Start with an offset of 0 and limit the results to 20 per request.**
 
 1. Add new Transaction Controller
 2. Add new **_While Controller_**
-   ![img_3.png](Screenshot/Capture_3_While_Controllerr.png)
+   ![img_3.png](https://github.com/kurisu-snek/CIMB_Specialization/blob/main/Final%20Project/Pokemon-API-Groovy-Jmeter-FinalProject-Martin_Christian_Setiawan/Screenshot/Capture_3_While_Controller.PNG)
 3. Create a counter set starting value 0 and increment 20 and store it to a variable named **_"offset"_** under HTTP Request
-   ![img_4.png](Screenshot/Capture_5_Offest_Counter.png)
+   ![img_4.png](https://github.com/kurisu-snek/CIMB_Specialization/blob/main/Final%20Project/Pokemon-API-Groovy-Jmeter-FinalProject-Martin_Christian_Setiawan/Screenshot/Capture_5_Offest_Counter.PNG)
 
 ### Endpoint
 
 Target Endpoint: https://pokeapi.co/api/v2/pokemon-species?offset=0&limit=20
 
-![img_5.png](Screenshot/Capture_4_HTTP_Request.png)
+![img_5.png](https://github.com/kurisu-snek/CIMB_Specialization/blob/main/Final%20Project/Pokemon-API-Groovy-Jmeter-FinalProject-Martin_Christian_Setiawan/Screenshot/Capture_4_HTTP_Request.PNG)
 
 1. Create HTTP Request to the endpoint
-   - Endpoint path is set as `${pathEndPoint}/pokemon-species` as `${pathEndPoint}` is from User Variables
+   - Endpoint path is set as `${pathEndPoint}/pokemon-species` as `${pathEndPoint}` is set from User Variables
 2. Extract the data needed, for this case extract the JSON response with JSON Extractor by add path expression `$.results[?(@.name == 'pikachu')]`
 3. Set the **_"isPokemonFound"_** variable to **"true"** so the while looping will be stopped
 4. log the details of the Pokémon
-   ![img_6.png](Screenshot/Capture_6_Log_Details.png)
+   ![img_6.png](https://github.com/kurisu-snek/CIMB_Specialization/blob/main/Final%20Project/Pokemon-API-Groovy-Jmeter-FinalProject-Martin_Christian_Setiawan/Screenshot/Capture_6_Log_Details.PNG)
 
 ## Task 2 : Find All Pokémon with Wings
 
@@ -54,7 +54,7 @@ Target Endpoint: https://pokeapi.co/api/v2/pokemon-species?offset=0&limit=20
       <li>Create HTTP Request to the 'Wings' shape url that already extracted</li>
       <l1>Extract the JSON Response to get the Pokémon name list with 'Wings' shape</l1>
       <li>Log the extracted result</li>
-      <img src="Screenshot/Capture_7_Wing_Log_Details.png">
+      <img src="https://github.com/kurisu-snek/CIMB_Specialization/blob/main/Final%20Project/Pokemon-API-Groovy-Jmeter-FinalProject-Martin_Christian_Setiawan/Screenshot/Capture_7_Wing_Log_Details.PNG">
    </ol>
  </li>
 </ol>
